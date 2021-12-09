@@ -1,20 +1,46 @@
 * {
-    background-color: lightslategray;
+    background-color: rgb(0, 0, 0);
 }
 
 #navbar {
     width: 100%;
-    background-color: lavender;
+    height: 7vh;
+    background-color: rgb(32, 95, 48);
+    display: flex;
 }
 
 #main {
-    background-color: mintcream;
-    width: 98.5vw;
+    background-color: rgb(91, 94, 93);
+    width: 98vw;
     height: 95vh;
     margin: auto;
     margin-top: 1vh;
 }
 
 .navbutton {
-    
+    position: relative;
+    width: 10%;
+    height: 80%;
+    margin: 0.3%;
+    border-radius: 10px;
+    border: none;
+    background-color: rgb(150, 47, 35);
+    color: white;
+}
+
+.navbutton:hover {
+    background-color: red;
+    cursor: pointer;
+}
+
+#share {
+    position: relative;
+    float: right;
+}
+
+#title {
+    position: relative;
+    color: white;
+    background-color: rgb(32, 95, 48);
+    margin: 1%;
 }
