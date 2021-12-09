@@ -1,0 +1,20 @@
+* {
+    background-color: lightslategray;
+}
+
+#navbar {
+    width: 100%;
+    background-color: lavender;
+}
+
+#main {
+    background-color: mintcream;
+    width: 98.5vw;
+    height: 95vh;
+    margin: auto;
+    margin-top: 1vh;
+}
+
+.navbutton {
+    
+}
