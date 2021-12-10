@@ -1,6 +1,5 @@
-const homeButton = document.querySelector('#home')
-const aboutButton = document.querySelector('#about')
-const shareButton = document.querySelector('#share')
+// const aboutButton = document.querySelector('#about')
+// const shareButton = document.querySelector('#share')
 
 const libs = [
     {
@@ -19,7 +18,7 @@ const libs = [
             libtitle.innerHTML = "Rudolph's Not So Red Nose"
             libdiv.appendChild(libtitle)
         
-            const input1 = '<input id="r1" class="libinput" type="text" placeholder="Verb (Colour)">'
+            const input1 = '<input id="r1" class="libinput" type="text" placeholder="Adjective (Colour)">'
             const input2 = '<input id="r2" class="libinput" type="text" placeholder="Noun (Body Part)">'
             const input3 = '<input id="r3" class="libinput" type="text" placeholder="Noun (Place)">'
             const input4 = '<input id="r4" class="libinput" type="text" placeholder="Adjective (Emotion)">'
@@ -39,12 +38,28 @@ const libs = [
             submitButton.setAttribute('id', 'submit')
             submitButton.innerHTML = 'Submit'
             buttondiv.appendChild(submitButton)
+
+            submitButton.addEventListener('click', (e) => {
+                const r1 = document.querySelector('#r1').value
+                const r2 = document.querySelector('#r2').value
+                const r3 = document.querySelector('#r3').value
+                const r4 = document.querySelector('#r4').value
+                
+                paragraph.innerHTML = `There once was a reindeer named Rudolph who had a big ${r1} ${r2}. <br>
+                When Rudolph would go to the ${r3} everyone would tease him. <br> This made him very ${r4}.`
+
+                buttondiv.removeChild(submitButton)
+            })
         
             const returnButton = document.createElement('button')
             returnButton.classList.add('bottombutton')
             returnButton.setAttribute('id', 'return')
             returnButton.innerHTML = 'Return'
             buttondiv.appendChild(returnButton)
+
+            returnButton.addEventListener('click', (e) => {
+                loadHome(libs)
+            })
         }
     },
     {
@@ -104,9 +119,8 @@ function loadHome(list) {
     
 }
 
+const homeButton = document.querySelector('#home')
 homeButton.addEventListener('click', (e) => {
     loadHome(libs)
 })
-
-
 
