@@ -4,7 +4,8 @@ const shareButton = document.querySelector('#share')
 
 const libs = [
     {
-        Title: "Rudolph's Not So Red Nose"
+        Title: "Rudolph's Not So Red Nose",
+        Story: loadRudolph()
     },
     {
         Title: "Elves Party"
@@ -47,6 +48,10 @@ function clearMain() {
 }
 
 homeButton.addEventListener('click', (e) => {
-    clearHome()
+    clearMain()
     loadHome(libs)
 })
+
+function loadRudolph() {
+    
+}
