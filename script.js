@@ -134,7 +134,20 @@ function loadAbout() {
 
     const mainDiv = document.querySelector('#main')
 
-    
+    const aboutDiv = document.createElement('div')
+    aboutDiv.setAttribute('class', 'libdiv')
+    mainDiv.appendChild(aboutDiv)
+
+    const header = document.createElement('h2')
+    header.setAttribute('class', 'header')
+    header.innerHTML = 'Welcome to Christmas Mad Libs!'
+    aboutDiv.appendChild(header)
+
+    const info = document.createElement('p')
+    info.setAttribute('class', 'info')
+    info.innerHTML = `To get started, go to the homepage and click on a story you would like to play.<br>You will then be asked to input verbs, nouns, adjectives, etc.<br>
+    Once you click the submit button, a silly story will be generated for you.<br>It's that simple!<br>Grab some friends and your imagination!<br>Enjoy :)`
+    aboutDiv.appendChild(info)
 }
 
 const aboutButton = document.querySelector('#about')

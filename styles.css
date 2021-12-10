@@ -2,6 +2,7 @@
     background-color: rgb(42, 188, 236);
 }
 
+/* Navbar styles */
 #navbar {
     width: 99vw;
     height: 7vh;
@@ -37,7 +38,7 @@
     cursor: pointer;
 }
 
-
+/* Home page main section styles */
 #main {
     background-color: rgb(114, 87, 62);
     width: 98vw;
@@ -66,6 +67,7 @@
     cursor: pointer;
 }
 
+/* Mad lib page styles */
 .libdiv {
     position: relative;
     width: 100%;
@@ -127,7 +129,6 @@
     color: white;
 }
 
-
 #submit {
     background-color: rgb(32, 129, 92);
 }
@@ -146,7 +147,7 @@
     cursor: pointer;
 }
 
-.inputwords {
+.inputwords { 
     color: rgb(182, 73, 61);
     background-color: rgb(114, 87, 62);
     width: fit-content;
@@ -166,4 +167,28 @@
     font-size: 3vh;
     color: rgb(191, 199, 206);
     font-family: 'Times New Roman', Times, serif;
+}
+
+/* About page styles */
+.header {
+    position: relative;
+    background-color: rgb(114, 87, 62);
+    width: fit-content;
+    margin: auto;
+    margin-top: 6vh;
+    font-size: 9vh;
+    color: white;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.info {
+    position: relative;
+    background-color: rgb(114, 87, 62);
+    width: fit-content;
+    margin: auto;
+    margin-top: 7vh;
+    font-size: 5vh;
+    color: rgb(191, 199, 206);
+    font-family: 'Times New Roman', Times, serif;
+    text-align: center;
 }
