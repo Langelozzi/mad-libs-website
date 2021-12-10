@@ -1,4 +1,4 @@
-// const aboutButton = document.querySelector('#about')
+
 // const shareButton = document.querySelector('#share')
 
 const libs = [
@@ -17,16 +17,20 @@ const libs = [
             libtitle.classList.add('libtitle') 
             libtitle.innerHTML = "Rudolph's Not So Red Nose"
             libdiv.appendChild(libtitle)
+
+            const instructions = document.createElement('h2')
+            instructions.innerHTML = "Fill out these fields to generate your own silly mad libs story instantly!"
+            instructions.setAttribute('class', 'instructions')
+            libdiv.appendChild(instructions)
         
             const input1 = '<input id="r1" class="libinput" type="text" placeholder="Adjective (Colour)">'
             const input2 = '<input id="r2" class="libinput" type="text" placeholder="Noun (Body Part)">'
-            const input3 = '<input id="r3" class="libinput" type="text" placeholder="Noun (Place)">'
+            const input3 = '<input id="r3" class="libinput" type="text" placeholder="Noun (Location)">'
             const input4 = '<input id="r4" class="libinput" type="text" placeholder="Adjective (Emotion)">'
         
             const paragraph = document.createElement('p')
             paragraph.classList.add('libparagraph')
-            paragraph.innerHTML = `There once was a reindeer named Rudolph who had a big ${input1} ${input2}. <br>
-            When Rudolph would go to the ${input3} everyone would tease him. <br> This made him very ${input4}.`
+            paragraph.innerHTML = `${input1}<br>${input2}<br>${input3}<br>${input4}`
             libdiv.appendChild(paragraph)
         
             const buttondiv = document.createElement('div')
@@ -40,12 +44,13 @@ const libs = [
             buttondiv.appendChild(submitButton)
 
             submitButton.addEventListener('click', (e) => {
-                const r1 = document.querySelector('#r1').value
+                const r1 = document.querySelector('#r1')
+                r1.classList.add('inputwords')
                 const r2 = document.querySelector('#r2').value
                 const r3 = document.querySelector('#r3').value
                 const r4 = document.querySelector('#r4').value
                 
-                paragraph.innerHTML = `There once was a reindeer named Rudolph who had a big ${r1} ${r2}. <br>
+                paragraph.innerHTML = `There once was a reindeer named Rudolph who had a big ${r1.value} ${r2}. <br>
                 When Rudolph would go to the ${r3} everyone would tease him. <br> This made him very ${r4}.`
 
                 buttondiv.removeChild(submitButton)
@@ -63,7 +68,7 @@ const libs = [
         }
     },
     {
-        Title: "Elves Party",
+        Title: "An Elf Party",
         Story: null
     },
     {
@@ -71,11 +76,11 @@ const libs = [
         Story: null
     },
     {
-        Title: "Cookie Heist",
+        Title: "The Cookie Heist",
         Story: null
     },
     {
-        Title: "Present Scramble",
+        Title: "Scrambling For Presents",
         Story: null
     }
 ]
@@ -111,7 +116,7 @@ function loadHome(list) {
     clearMain()
     
     const mainDiv = document.querySelector('#main') 
-    
+
     for (let i=0; i < list.length; i++) {
         let singleLib = createLibButton(list[i])
         mainDiv.appendChild(singleLib)
@@ -124,3 +129,15 @@ homeButton.addEventListener('click', (e) => {
     loadHome(libs)
 })
 
+function loadAbout() {
+    clearMain()
+
+    const mainDiv = document.querySelector('#main')
+
+    
+}
+
+const aboutButton = document.querySelector('#about')
+aboutButton.addEventListener('click', (e) => {
+    loadAbout()
+})

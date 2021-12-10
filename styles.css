@@ -21,8 +21,8 @@
 
 .navbutton {
     position: relative;
-    width: 10%;
-    height: 80%;
+    width: 9vw;
+    height: 5.7vh;
     margin: 0.3%;
     border-radius: 10px;
     border: none;
@@ -52,9 +52,9 @@
 }
 
 .libbutton {
-    width: 25%;
-    height: 18%;
-    margin: 4vw;
+    width: 26vw;
+    height: 22vh;
+    margin: 3.3vw;
     border: none;
     border-radius: 10px;
     background-color: tan;
@@ -155,4 +155,15 @@
     margin: auto;
     margin-top: 6vh;
     text-align: center;
+}
+
+.instructions {
+    position: relative;
+    background-color: rgb(114, 87, 62);
+    width: fit-content;
+    margin: auto;
+    margin-top: 1%;
+    font-size: 3vh;
+    color: rgb(191, 199, 206);
+    font-family: 'Times New Roman', Times, serif;
 }
