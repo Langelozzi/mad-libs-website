@@ -23,10 +23,10 @@ const libs = [
             instructions.setAttribute('class', 'instructions')
             libdiv.appendChild(instructions)
         
-            const input1 = '<input id="r1" class="libinput" type="text" placeholder="Adjective (Colour)">'
-            const input2 = '<input id="r2" class="libinput" type="text" placeholder="Noun (Body Part)">'
-            const input3 = '<input id="r3" class="libinput" type="text" placeholder="Noun (Location)">'
-            const input4 = '<input id="r4" class="libinput" type="text" placeholder="Adjective (Emotion)">'
+            const input1 = '<input id="r1" class="libinput" type="text" placeholder="Adjective (Colour)" required>'
+            const input2 = '<input id="r2" class="libinput" type="text" placeholder="Noun (Body Part)" required>'
+            const input3 = '<input id="r3" class="libinput" type="text" placeholder="Noun (Location)" required>'
+            const input4 = '<input id="r4" class="libinput" type="text" placeholder="Adjective (Emotion)" required>'
         
             const paragraph = document.createElement('p')
             paragraph.classList.add('libparagraph')
@@ -45,15 +45,20 @@ const libs = [
 
             submitButton.addEventListener('click', (e) => {
                 const r1 = document.querySelector('#r1')
-                r1.classList.add('inputwords')
-                const r2 = document.querySelector('#r2').value
-                const r3 = document.querySelector('#r3').value
-                const r4 = document.querySelector('#r4').value
+                const r2 = document.querySelector('#r2')
+                const r3 = document.querySelector('#r3')
+                const r4 = document.querySelector('#r4')
                 
-                paragraph.innerHTML = `There once was a reindeer named Rudolph who had a big ${r1.value} ${r2}. <br>
-                When Rudolph would go to the ${r3} everyone would tease him. <br> This made him very ${r4}.`
+                if (r1.value == ''|| r2.value == ''|| r3.value == ''|| r4.value == '') {
+                    alert("Please enter an answer into every field")
+                }
+                else {
+                    paragraph.innerHTML = `There once was a reindeer named Rudolph who had a big ${r1.value} ${r2.value}. <br>
+                    When Rudolph would go to the ${r3.value} everyone would tease him. <br> This made him very ${r4.value}.`
+    
+                    buttondiv.removeChild(submitButton)
+                }
 
-                buttondiv.removeChild(submitButton)
             })
         
             const returnButton = document.createElement('button')
