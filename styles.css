@@ -3,7 +3,7 @@
 }
 
 #navbar {
-    width: 100%;
+    width: 99vw;
     height: 7vh;
     background-color: rgb(35, 156, 65);
     display: flex;
@@ -15,6 +15,8 @@
     color: white;
     background-color: rgb(35, 156, 65);
     margin: 1%;
+    font-size: 2.5vh;
+    overflow: auto;
 }
 
 .navbutton {
@@ -26,6 +28,7 @@
     border: none;
     background-color: rgb(182, 73, 61);
     color: white;
+    font-size: 2vh;
 }
 
 .navbutton:hover {
@@ -37,7 +40,7 @@
 #main {
     background-color: rgb(114, 87, 62);
     width: 98vw;
-    height: 95vh;
+    height: 90vh;
     margin: auto;
     margin-top: 1vh;
     border-radius: 10px;
@@ -54,10 +57,54 @@
     border: none;
     border-radius: 10px;
     background-color: tan;
-    font-size: 200%;
+    font-size: 3vh;
 }
 
 .libbutton:hover {
     background-color: rgb(212, 168, 110);
     cursor: pointer;
+}
+
+.libdiv {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    border: solid 2px black;
+    border-radius: 10px;
+    background-color: rgb(114, 87, 62);
+}
+
+.libtitle {
+    position: relative;
+    background-color: rgb(114, 87, 62);
+    width: fit-content;
+    margin: auto;
+    margin-top: 1%;
+    font-size: 7vh;
+    font-style: italic;
+    color: aliceblue;
+}
+
+.libparagraph {
+    border: solid 1px black;
+    background-color: rgb(114, 87, 62);
+    width: fit-content;
+    font-size: 6vh;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    margin: auto;
+    margin-top: 4vh;
+}
+
+.libinput {
+    width: 14vw;
+    height: 6vh;
+    border: solid 1px black;
+    border-radius: 10px;
+    background-color: aliceblue;
+    font-size: 4.5vh;
+}
+
+::placeholder {
+    font-size: 3vh;
+    font-style: italic;
 }
