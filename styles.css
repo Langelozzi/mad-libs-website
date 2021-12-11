@@ -29,7 +29,7 @@
     border: none;
     background-color: rgb(182, 73, 61);
     color: white;
-    font-size: 2vh;
+    font-size: 1.8vh;
     border: solid 1.5px black;
 }
 
@@ -56,7 +56,7 @@
     width: 26vw;
     height: 22vh;
     margin: 3.3vw;
-    border: none;
+    border: solid 3px black;
     border-radius: 10px;
     background-color: tan;
     font-size: 3vh;
@@ -99,7 +99,7 @@
 }
 
 .libinput {
-    width: 14vw;
+    width: 80%;
     height: 6vh;
     border: solid 1px black;
     border-radius: 10px;
@@ -185,10 +185,9 @@ em {
     position: relative;
     background-color: rgb(114, 87, 62);
     width: fit-content;
+    text-align: center;
     margin: auto;
     margin-top: 7vh;
-    margin-left: 1vw;
-    margin-right: 1vw;
     font-size: 5vh;
     color: rgb(191, 199, 206);
     font-family: 'Times New Roman', Times, serif;

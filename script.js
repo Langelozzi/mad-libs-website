@@ -154,7 +154,79 @@ const libs = [
     },
     {
         Title: "Santa's Accident",
-        Story: null
+        Story: function loadSanta() {
+            clearMain()
+            
+            const mainDiv = document.querySelector('#main')
+            
+            const libdiv = document.createElement('div')
+            libdiv.classList.add('libdiv')
+            mainDiv.appendChild(libdiv)
+        
+            const libtitle = document.createElement('h3')
+            libtitle.classList.add('libtitle') 
+            libtitle.innerHTML = "Santa's Accident"
+            libdiv.appendChild(libtitle)
+
+            const instructions = document.createElement('h2')
+            instructions.innerHTML = "Fill out these fields to generate your own silly mad libs story instantly!"
+            instructions.setAttribute('class', 'instructions')
+            libdiv.appendChild(instructions)
+        
+            const input1 = '<input id="r1" class="libinput" type="text" placeholder="Noun (Item)" required>'
+            const input2 = '<input id="r2" class="libinput" type="text" placeholder="Noun (Location)" required>'
+            const input3 = '<input id="r3" class="libinput" type="text" placeholder="Noun (Location)" required>'
+            const input4 = '<input id="r4" class="libinput" type="text" placeholder="Adjective" required>'
+            const input5 = '<input id="r5" class="libinput" type="text" placeholder="Noun (Item)" required>'
+            const input6 = '<input id="r6" class="libinput" type="text" placeholder="Noun (Body Part)" required>'
+        
+            const paragraph = document.createElement('p')
+            paragraph.classList.add('libparagraph')
+            paragraph.innerHTML = `${input1}<br>${input2}<br>${input3}<br>${input4}<br>${input5}<br>${input6}`
+            libdiv.appendChild(paragraph)
+        
+            const buttondiv = document.createElement('div')
+            buttondiv.classList.add('buttondiv')
+            libdiv.appendChild(buttondiv)
+        
+            const submitButton = document.createElement('button')
+            submitButton.classList.add('bottombutton')
+            submitButton.setAttribute('id', 'submit')
+            submitButton.innerHTML = 'Submit'
+            buttondiv.appendChild(submitButton)
+
+            submitButton.addEventListener('click', (e) => {
+                const r1 = document.querySelector('#r1')
+                const r2 = document.querySelector('#r2')
+                const r3 = document.querySelector('#r3')
+                const r4 = document.querySelector('#r4')
+                const r5 = document.querySelector('#r5')
+                const r6 = document.querySelector('#r6')
+                
+                if (r1.value == ''|| r2.value == ''|| r3.value == ''|| r4.value == '' || r5.value == ''|| r6.value == '') {
+                    alert("Please enter an answer into every field")
+                }
+                else {
+                    paragraph.innerHTML = `It was Christmas morning and poor Santa couldn't find his <em>${r1.value}</em>.<br>
+                    He searched high and low, in the <em>${r2.value}</em> and the <em>${r3.value}</em> but found nothing.<br>
+                    Luckily he had his trusty <em>${r4.value}</em> <em>${r5.value}</em> to help him.<br>
+                    While searching, Santa fell and bonked his <em>${r6.value}</em> so he was unable to deliver presents this year.`
+    
+                    buttondiv.removeChild(submitButton)
+                }
+
+            })
+        
+            const returnButton = document.createElement('button')
+            returnButton.classList.add('bottombutton')
+            returnButton.setAttribute('id', 'return')
+            returnButton.innerHTML = 'Return'
+            buttondiv.appendChild(returnButton)
+
+            returnButton.addEventListener('click', (e) => {
+                loadHome(libs)
+            })
+        }
     },
     {
         Title: "The Cookie Heist",
