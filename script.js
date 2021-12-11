@@ -1,3 +1,4 @@
+//Array with objects for each story page
 const libs = [
     {
         Title: "Rudolph's Not So Red Nose",
@@ -301,6 +302,8 @@ const libs = [
     },
 ]
 
+
+//function to clear the contents of the main div
 function clearMain() {
     const mainDiv = document.querySelector('#main') 
 
@@ -309,6 +312,7 @@ function clearMain() {
     }
 }
 
+//function to create a single button that leads to a story. The buttons on the home screen.
 function createLibButton(obj) {
     let lib = document.createElement('button')
     lib.setAttribute('class', 'libbutton')
@@ -328,6 +332,7 @@ function createLibButton(obj) {
     return lib
 }
 
+//Function to load the homescreen aka generate all stories
 function loadHome(list) {
     clearMain()
     
@@ -340,12 +345,14 @@ function loadHome(list) {
     
 }
 
+//event listner so that home screen is loaded when home button is pressed
 const homeButton = document.querySelector('#home')
 homeButton.addEventListener('click', (e) => {
     loadHome(libs)
 })
 
-function loadAbout() {
+//function to load the instructions page
+function loadInstructions() {
     clearMain()
 
     const mainDiv = document.querySelector('#main')
@@ -366,7 +373,8 @@ function loadAbout() {
     aboutDiv.appendChild(info)
 }
 
+//event listener so that instructions page is loaded when instructions button is pressed
 const aboutButton = document.querySelector('#about')
 aboutButton.addEventListener('click', (e) => {
-    loadAbout()
+    loadInstructions()
 })
