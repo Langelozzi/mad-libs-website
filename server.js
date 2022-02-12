@@ -1,12 +1,14 @@
 var express = require('express');
 var app = express();
 var path = require('path');
+var router = express.Router();
+module.exports = router;
 
 //renders the css as a static file
 app.use(express.static(__dirname));
 
 //sends my html page as response when root page is accessed
-app.get('/', (req, res, err) => {
+router.get('/', (req, res, err) => {
     res.sendFile(path.join(__dirname+'/index.html'));
 })
 
