@@ -4,6 +4,8 @@ var path = require('path');
 var router = express.Router();
 module.exports = router;
 
+var port = process.env.PORT || 80;
+
 //renders the css as a static file
 app.use(express.static(__dirname));
 
@@ -13,6 +15,6 @@ router.get('/', (req, res, err) => {
 })
 
 //listens on port 80 and confirms the server starts in console
-app.listen(80, () => {
-    console.log("Server started on port 80");
+app.listen(port, () => {
+    console.log("Server started on port " + port);
 })
