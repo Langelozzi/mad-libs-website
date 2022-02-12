@@ -4,6 +4,7 @@ var path = require('path');
 var router = express.Router();
 module.exports = router;
 
+//this is necessary because heroku automatically sets a port that is accessed with process.env.PORT
 var port = process.env.PORT || 80;
 
 //renders the css as a static file
